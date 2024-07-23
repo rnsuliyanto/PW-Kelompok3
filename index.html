@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    
+
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#" class="menu" id="home">
+                    <span class="icon">
+                        <img src="icon/home.png" alt="">
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#" class="menu" id="member">
+                    <span class="icon">
+                        <img src="icon/user.png" alt="">
+                    </span>
+                    <span class="text">Member Kelompok</span>
+                </a>
+            </li>
+            <li class="list">
+                <a class="menu" href="#" id="RJS">
+                    <span class="icon">
+                        <img src="icon/task.png" alt="">
+                    </span>
+                    <span class="text">React JS</span>
+                </a>
+            </li>
+            <li class="list">
+                <a class="menu" href="#" id="RJS2">
+                    <span class="icon">
+                        <img src="icon/task.png" alt="">
+                    </span>
+                    <span class="text">RJS2</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <img src="icon/task.png" alt="">
+                    </span>
+                    <span class="text">Tugas UAS</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    
+    <div id="content"></div>
+
+    
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item)=>
+        item.classList.remove('active'));
+        this.classList.add('active');
+        }
+        list.forEach((item) =>
+    item.addEventListener('click', activeLink));
+    
+    </script>
+    
+</body>
+</html>
