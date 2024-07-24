@@ -63,19 +63,40 @@ code {
     border-radius: 8px;
     border: 1px solid #ddd;
 }
+.inputSection {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
 
-#button {
+.inputSection button {
     background-color: #007bff;
-    color: #fff;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     font-size: 1.1em;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
+    padding: 5px;
 }
 
-#button:hover {
+.inputSection input {
+    width: 40%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000;
+    padding: 20px 45px 20px 20px;
+}
+
+.inputSection button:hover {
     background-color: #0056b3;
 }
 
