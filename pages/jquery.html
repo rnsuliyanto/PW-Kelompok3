@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contoh jQuery</title>
-    <link rel="stylesheet" href="css/jqueryjs.css"> <!-- Sertakan file CSS Anda di sini -->
+    <link rel="stylesheet" href="../css/jqueryjs.css"> <!-- Sertakan file CSS Anda di sini -->
 </head>
 <body>
     <div class="content">
@@ -19,7 +19,48 @@
             <h2>Contoh Kode</h2>
             <p>Berikut adalah contoh skrip jQuery sederhana:</p>
             <pre><code class="language-javascript">
-{`// index.html
+    $(document).ready(function () {
+        var countdownTimer;
+                
+        $("#startButton").click(function () {
+            var inputDate = $("#datetime").val();
+            if (!inputDate) {
+                alert("Silakan pilih waktu akhir.");
+                return;
+            }
+                
+            var countDownDate = new Date(inputDate).getTime();
+                
+            if (countdownTimer) {
+                            clearInterval(countdownTimer);
+            }
+                
+             countdownTimer = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                
+                var hari = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var jam = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var menit = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var detik = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                $("#hari").text(hari);
+                $("#jam").text(jam);
+                $("#menit").text(menit);
+                $("#detik").text(detik);
+                $("#countdown").show();
+                
+                if (distance < 0) {
+                    clearInterval(countdownTimer);
+                    $("#countdown").text("Waktu Habis");
+                }
+            }, 1000);
+        });
+    });
+
+                
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -27,38 +68,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contoh jQuery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
-        $(document).ready(function() {
-            $('#button').click(function() {
-                $('#message').text('Halo, jQuery!');
-            });
-        });
+        
     </script>
 </head>
 <body>
-    <button id="button">Klik saya!</button>
-    <p id="message"></p>
+    
 </body>
 </html>
-            `}
             </code></pre>
         </section>
         
         <section class="output">
             <h2>Hasil Render</h2>
-            <button id="button">Klik saya!</button>
-            <p id="message"></p>
-        </section>
-    </div>
+            <div id="inputSection">
+                <label for="datetime">Pilih waktu akhir:</label>
+                <input type="datetime-local" id="datetime">
+                <button id="startButton">Mulai Countdown</button>
+            </div>
+            <div id="countdown">
+                <span id="hari"></span> Hari 
+                <span id="jam"></span> Jam 
+                <span id="menit"></span> Menit 
+                <span id="detik"></span> Detik
+            </div>
 
     <!-- Sertakan jQuery dari CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#button').click(function() {
-                $('#message').text('Halo, jQuery!');
-            });
-        });
+        $(document).ready(function () {
+    var countdownTimer;
+
+    $("#startButton").click(function () {
+        var inputDate = $("#datetime").val();
+        if (!inputDate) {
+            alert("Silakan pilih waktu akhir.");
+            return;
+        }
+
+        var countDownDate = new Date(inputDate).getTime();
+
+        if (countdownTimer) {
+            clearInterval(countdownTimer);
+        }
+
+        countdownTimer = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var hari = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var jam = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var menit = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var detik = Math.floor((distance % (1000 * 60)) / 1000);
+
+            $("#hari").text(hari);
+            $("#jam").text(jam);
+            $("#menit").text(menit);
+            $("#detik").text(detik);
+            $("#countdown").show();
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                $("#countdown").text("Waktu Habis");
+            }
+        }, 1000);
+    });
+});
+
     </script>
 </body>
 </html>
