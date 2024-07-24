@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh jQuery</title>
+    <link rel="stylesheet" href="css/jqueryjs.css"> <!-- Sertakan file CSS Anda di sini -->
+</head>
+<body>
+    <div class="content">
+        <h1>Contoh jQuery</h1>
+        
+        <section class="intro">
+            <h2>Pengenalan</h2>
+            <p>jQuery adalah pustaka JavaScript yang cepat, kecil, dan kaya fitur. jQuery menyederhanakan berbagai hal seperti traversal dan manipulasi dokumen HTML, penanganan event, dan animasi. jQuery mudah digunakan dan membuat bekerja dengan JavaScript menjadi lebih intuitif.</p>
+        </section>
+        
+        <section class="code-example">
+            <h2>Contoh Kode</h2>
+            <p>Berikut adalah contoh skrip jQuery sederhana:</p>
+            <pre><code class="language-javascript">
+{`// index.html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#button').click(function() {
+                $('#message').text('Halo, jQuery!');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="button">Klik saya!</button>
+    <p id="message"></p>
+</body>
+</html>
+            `}
+            </code></pre>
+        </section>
+        
+        <section class="output">
+            <h2>Hasil Render</h2>
+            <button id="button">Klik saya!</button>
+            <p id="message"></p>
+        </section>
+    </div>
+
+    <!-- Sertakan jQuery dari CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#button').click(function() {
+                $('#message').text('Halo, jQuery!');
+            });
+        });
+    </script>
+</body>
+</html>
