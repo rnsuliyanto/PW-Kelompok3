@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chart.js Example</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-    <p>Ini halaman chartsJS</p>
+    <main>
+        <div class="chart-explain">
+            <h2>Charts Js</h2>
+            <div class="explain">
+                <p>Chart.js adalah pustaka JavaScript open-source yang memungkinkan Anda membuat berbagai jenis grafik yang responsif dan interaktif pada halaman web. Pustaka ini sangat berguna untuk visualisasi data dan mendukung banyak jenis grafik seperti bar, line, pie, radar, doughnut, polar area, bubble, scatter, dan lain-lain. Berikut adalah beberapa poin penting tentang Chart.js:</p>
+            </div>
+            <div class="explain">
+                <h2>1. Jenis Grafik</h2>
+                <p>Berikut adalah beberapa poin penting tentang Chart.js:</p>
+                <ul>
+                    <li><b>Bar Chart:</b> Grafik batang yang berguna untuk membandingkan data.</li>
+                    <li><b>Line Chart:</b> Grafik garis yang baik untuk menunjukkan tren data dari waktu ke waktu.</li>
+                    <li><b>Pie and Doughnut Charts:</b> Grafik pai dan donat yang digunakan untuk menunjukkan proporsi bagian-bagian dari keseluruhan.</li>
+                    <li><b>Radar Chart:</b> Grafik radar yang berguna untuk membandingkan variabel ganda.</li>
+                    <li><b>Polar Area Chart:</b> Grafik area polar yang mirip dengan grafik pie, tetapi segmennya memiliki sudut tetap.</li>
+                    <li><b>Bubble Chart:</b> Grafik gelembung yang menampilkan data dalam tiga dimensi.</li>
+                    <li><b>Scatter Chart:</b> Grafik pencar yang baik untuk menunjukkan hubungan antara dua variabel.</li>
+                </ul>
+            </div>
+            <div class="explain">
+                <h2>2. Fitur</h2>
+                <p>Berikut adalah beberapa fitur unggulan dari Chart.js:</p>
+                <ul>
+                    <li><b>Responsif:</b> Grafik yang dibuat dengan Chart.js bersifat responsif dan akan menyesuaikan dengan ukuran layar.</li>
+                    <li><b>Interaktivitas:</b> Mendukung interaktivitas seperti hover dan klik pada elemen grafik untuk menampilkan informasi tambahan.</li>
+                    <li><b>Animasi:</b> Mendukung animasi yang membuat grafik lebih dinamis dan menarik.</li>
+                    <li><b>Kustomisasi:</b> Menawarkan berbagai opsi kustomisasi untuk tampilan dan perilaku grafik, termasuk warna, label, dan skala.</li>
+                </ul>
+            </div>
+            <div class="explain">
+                <h2>3. Kemudahan Pengguna</h2>
+                <p>Beberapa hal yang membuat pengguna menjadi mudah menggunakan Chart.js:</p>
+                <ul>
+                    <li><b>Integrasi:</b> Mudah diintegrasikan dengan HTML dan JavaScript.</li>
+                    <li><b>Dokumentasi Lengkap:</b> Memiliki dokumentasi yang lengkap dan contoh kode yang membantu pengguna memahami cara menggunakan dan mengonfigurasi pustaka ini.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="chart-explain">
+            <div class="example-chart">
+                <h2>Berikut Syntax Chart.js</h2>
+                <img src="../images/chart.png" alt="">
+            </div>
+            <div class="chart-container">
+                <h2>Berikut contoh Chart.js</h2>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </main>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['farhan', 'Rian', 'Andika', 'Dio', 'Adrian', 'Anang'],
+                datasets: [{
+                    label: '# Vote Ketua Kelas',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'rgba(0, 0, 0, 0.7)',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>
+    
