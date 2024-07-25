@@ -53,6 +53,44 @@ header h2 {
     color: #666;
 }
 
+/* Download Section Styles */
+.download {
+    background-color: white;
+    margin: 20px 0;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.download h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.download p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
 footer {
     text-align: center;
     margin-top: 20px;
