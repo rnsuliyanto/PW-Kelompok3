@@ -11,7 +11,7 @@ $(document).ready(function () {
         } else if(menu == "member") {
             $('#content').load('pages/member.html');
         } else if (menu == "reactJS") {
-            $('#content').load('pages/App.js');
+            $('#content').load('pages/reactjs.html');
         } else if (menu == "jqueryJS") {
             $('#content').load('pages/jquery.html');
         } else if (menu == "chartsJS") {
